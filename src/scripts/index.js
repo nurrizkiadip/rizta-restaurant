@@ -8,3 +8,5 @@ hamburgerBtn.addEventListener('click', function(){
   navbarMenu.classList.toggle('active')
   hamburgerBtn.classList.toggle('active')
 }) 
+
+hamburgerBtn.tabIndex = 0
