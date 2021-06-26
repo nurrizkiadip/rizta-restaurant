@@ -1,0 +1,101 @@
+/* TABLET */
+@media screen and (min-width: 768px) {
+
+  /** AWAL NAV */
+  nav .brand-logo {
+    margin: 0 36px;
+  }
+
+  nav .navbar-menu {
+    width: calc(100% - 100px);
+  }
+
+  /** AKHIR NAV */
+
+  /** MAIN */
+  main .content .detail-container {
+    width: 85%;
+  }
+
+  main .content .restaurant-name {
+    font-size: calc(3vw - 1.25vh);
+  }
+
+  /** AKHIR MAIN */
+
+  /** AWAL FOOTER */
+  footer {
+    min-height: calc(25vw - 5vw);
+    padding: 5vh 0;
+  }
+
+  footer .copyright {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+
+  }
+
+  footer .sosmed a {
+    font-size: 1.7rem;
+    margin: 0 16px;
+  }
+
+  /** AKHIR FOOTER */
+}
+
+
+/* Laptop 1024px */
+@media screen and (min-width: 1024px) {
+
+  /** NAVBAR */
+  nav .hamburger-button {
+    display: none;
+  }
+
+  nav .navbar-menu {
+    min-height: auto;
+    width: auto;
+    position: static;
+    display: block;
+    padding: 0;
+    margin: 0;
+
+    background: none;
+    box-shadow: none;
+  }
+
+  nav .navbar-menu a {
+    display: inline-block;
+    font-family: 'Kaushan Script', cursive;
+    padding: 4px 36px;
+  }
+
+  nav .navbar-menu a:hover {
+    background-color: #eeeeee33;
+  }
+
+  nav .navbar-menu a::after {
+    display: none;
+  }
+
+}
+
+/* Screen 4K */
+@media screen and (min-width: 2560px) {
+
+  /** AWAL FOOTER */
+  footer {
+    padding: 5vw 0;
+  }
+
+  footer .copyright {
+    font-size: 1.8rem;
+  }
+
+  footer .sosmed a {
+    font-size: 2rem;
+
+  }
+
+  /** AKHIR FOOTER */
+}

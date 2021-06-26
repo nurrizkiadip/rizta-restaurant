@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta name="theme-color" content="#00adb5">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+  <link rel="icon" href="favicon.jpeg" />  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
  
   <title>Rizta Restaurant</title>
@@ -20,9 +24,9 @@
         <span></span>
       </button>
       <div class="navbar-menu" id="navbar-menu">
-        <a href="./index.html">Home</a>
-        <a href="#">Favorite</a>
-        <a href="#">Contact Us</a>
+        <a href="#/home">Home</a>
+        <a href="#/favorite">Favorite</a>
+        <a href="#/contact-us">Contact Us</a>
         <a href="https://www.linkedin.com/in/nur-rizki-adi-prasetyo-2a2ba0157/" target="_blank">About Us</a>
       </div>
     </div>
@@ -43,169 +47,9 @@
       </div>
     </div>
   </header>
-
   
   <main>
-    <div class="inner-width">
-      <section id="content" tabindex="0">
-        <h2 tabindex="0" class="section-title">Contents</h2>
-      
-        <div class="content">
-          <ul class="card-heros">
-            <!-- 1 -->
-            <li class="card">
-              <div class="card-avatar">
-                <img tabindex="0" class="card-image" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/41" alt="Bring Your Phone Cafe">
-                <div class="caption-img">
-                  <span class="rating"><i class="fas fa-star"></i> 4.6</span>
-                  <span class="city"><i class="fas fa-map-marker-alt"></i> Medan</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <span></span>
-                <span class="id">6c7bqjgi84kcowlqdz</span>
-                
-                <h3 tabindex="0" class="name">Bring Your Phone Cafe</h3>
-                <p tabindex="0" class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>  
-              </div>
-  
-            </li>
-  
-            <!-- 2 -->
-            <li class="card">
-              <div class="card-avatar">
-                <img tabindex="0" class="card-image" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/07" alt="Run The Gun">
-                <div class="caption-img">
-                  <span class="rating"><i class="fas fa-star"></i> 4.6</span>
-                  <span class="city"><i class="fas fa-map-marker-alt"></i> Bali</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <span class="id">ljx8i0qu2uckcowlqdz</span>
-                <h3 tabindex="0" class="name">Run The Gun</h3>
-                <p tabindex="0" class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>  
-              </div>
-  
-            </li>
-  
-            <!-- 3 -->
-            <li class="card">
-              <div class="card-avatar">
-                <img tabindex="0" class="card-image" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/29" alt="Pangsit Express">
-                <div class="caption-img">
-                  <span class="rating"><i class="fas fa-star"></i> 4.8</span>
-                  <span class="city"><i class="fas fa-map-marker-alt"></i> Ternate</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <span class="id">fe8bbxoazddkcowlqdz</span>
-                <h3 tabindex="0" class="name">Pangsit Express</h3>
-                <p tabindex="0" class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>  
-              </div>
-  
-            </li>
-  
-            <!-- 4 -->
-            <li class="card">
-              <div class="card-avatar">
-                <img tabindex="0" class="card-image" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/38" alt="Ducky Duck">
-                <div class="caption-img">
-                  <span class="rating"><i class="fas fa-star"></i> 4.7</span>
-                  <span class="city"><i class="fas fa-map-marker-alt"></i> Malang</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <span class="id">ik1zljmlf68kcowlqdz</span>
-                <h3 tabindex="0" class="name">Ducky Duck</h3>
-                <p tabindex="0" class="description">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>  
-              </div>
-  
-            </li>
-            </li>
-  
-            <!-- 5 -->
-            <li class="card">
-              <div class="card-avatar">
-                <img tabindex="0" class="card-image" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/40" alt="Kafein">
-                <div class="caption-img">
-                  <span class="rating"><i class="fas fa-star"></i> 3.8</span>
-                  <span class="city"><i class="fas fa-map-marker-alt"></i> Bali</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <span class="id">9jpuzkm6n6jkcowlqdz</span>
-                <h3 tabindex="0" class="name">Kafein</h3>
-                <p tabindex="0" class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>  
-              </div>
-            </li>
-  
-            <!-- 6 -->
-            <li class="card">
-              <div class="card-avatar">
-                <img tabindex="0" class="card-image" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/08" alt="Makan mudah">
-                <div class="caption-img">
-                  <span class="rating"><i class="fas fa-star"></i> 4.6</span>
-                  <span class="city"><i class="fas fa-map-marker-alt"></i> Malang</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <span class="id">cpl5jpsnuqkkcowlqdz</span>
-                <h3 tabindex="0" class="name">Makan mudah</h3>
-                <p tabindex="0" class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>  
-              </div>
-            </li>
-  
-            <!-- 7 -->
-            <li class="card">
-              <div class="card-avatar">
-                <img tabindex="0" class="card-image" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/32" alt="Saya Suka">
-                <div class="caption-img">
-                  <span class="rating"><i class="fas fa-star"></i> 3.6</span>
-                  <span class="city"><i class="fas fa-map-marker-alt"></i> Surabaya</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <span class="id">iqtf9hmdzvbkcowlqdz</span>
-                <h3 tabindex="0" class="name">Saya Suka</h3>
-                <p tabindex="0" class="description">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>  
-              </div>
-            </li>
-  
-            <!-- 8 -->
-            <li class="card">
-              <div class="card-avatar">
-                <img tabindex="0" class="card-image" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/45" alt="Gigitan Cepat">
-                <div class="caption-img">
-                  <span class="rating"><i class="fas fa-star"></i> 4.0</span>
-                  <span class="city"><i class="fas fa-map-marker-alt"></i> Aceh</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <span class="id">8i06gqcc2dpkcowlqdz</span>
-                <h3 tabindex="0" class="name">Gigitan Cepat</h3>
-                <p tabindex="0" class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>  
-              </div>
-            </li>
-  
-            <!-- 9 -->
-            <li class="card">
-              <div class="card-avatar">
-                <img tabindex="0" class="card-image" src="https://dicoding-restaurant-api.el.r.appspot.com/images/medium/04" alt="Fairy Cafe">
-                <div class="caption-img">
-                  <span class="rating"><i class="fas fa-star"></i> 3.9</span>
-                  <span class="city"><i class="fas fa-map-marker-alt"></i> Malang</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <span class="id">wf5o19xhxxkcowlqdz</span>
-                <h3 tabindex="0" class="name">Fairy Cafe</h3>
-                <p tabindex="0" class="description">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>  
-              </div>
-  
-            </li>
-          </ul>  
-        </div>
-      </section>
+    <div class="inner-width" id="main-content" tabindex="0">
     </div>
   </main>
   

@@ -1,5 +1,8 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable import/no-extraneous-dependencies */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -22,13 +25,13 @@ module.exports = {
         ],
       },
       {
-          test: /\.(png|svg|jpg|gif)$/,
-          use: ['file-loader']
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ['file-loader'],
       },
       {
-          test: /\.(woff|woff2|eot|ttf|otf)$/,
-          use: ['file-loader']
-      }
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: ['file-loader'],
+      },
     ],
   },
   plugins: [
@@ -43,6 +46,9 @@ module.exports = {
           to: path.resolve(__dirname, 'dist/'),
         },
       ],
+    }),
+    new ServiceWorkerWebpackPlugin({
+      entry: path.resolve(__dirname, 'src/scripts/sw.js'),
     }),
   ],
 };
