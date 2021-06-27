@@ -3,6 +3,7 @@ import CONFIG from './config';
 
 const API_ENDPOINT = {
   LIST: `${CONFIG.BASE_URL}list`,
+  POST_REVEIW: 'https://restaurant-api.dicoding.dev/review',
   DETAIL: (id) => `${CONFIG.BASE_URL}detail/${id}`,
   LOAD_IMAGE_SM: (id) => `${CONFIG.BASE_URL}images/small/${id}`,
   LOAD_IMAGE_MD: (id) => `${CONFIG.BASE_URL}images/medium/${id}`,

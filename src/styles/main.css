@@ -15,7 +15,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
 }
 
 html {
@@ -99,11 +98,54 @@ body {
 
 }
 
+/** SKIP TO LINK */
 .skip-link:focus {
   left: 20px;
 }
 
-/** SKIP TO LINK */
+/** Center the loader */
+#loader-show {
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
+  border: 12px solid #e3e3e3;
+  border-radius: 50%;
+  border-top: 12px solid #3498db;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#favorited-feedback {
+  background-image: linear-gradient(45deg, #434343 0%, black 100%, #434343 0%);
+  position: fixed;
+  left: 50%;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, .3);
+  color: azure;
+  transform: translateX(-50%);
+  padding: 1rem 2.5rem;
+  user-select: none;
+
+  transition: .5s ease-in-out;
+}
+
+#favorited-feedback.show {
+  bottom: 5%;
+}
 
 /** NAVBAR */
 nav {
@@ -323,16 +365,17 @@ header .navigation::after {
 
 
 /** AWAL MAIN */
-main .inner-width {
+#main-content {
   padding-top: 70px;
-
+  min-height: 80vh;
+  position: relative;
 }
 
 main .content .card-heros {
   font-family: "Nunito", sans-serif;
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 24px 36px;
 }
 
@@ -341,8 +384,6 @@ main .content .card-heros .card {
   list-style: none;
 
   box-shadow: 0 0 6px rgba(0, 0, 0, .6);
-  /* background-color: #1cb9aa; */
-  /* color: white; */
   cursor: pointer;
 
   transition: .15s ease-in-out;
@@ -460,8 +501,6 @@ main .content .card-heros .card-body .description {
 
 main .content .detail-container {
   font-family: 'Poppins', sans-serif;
-
-  width: 90%;
   margin: 0 auto;
 }
 
@@ -476,16 +515,149 @@ main .content img {
   width: 100%;
   line-height: 0;
   margin: 0 auto;
-  border-radius: 4px;
-  box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.2);
+}
+
+main .detail-container .restaurant-info,
+main .detail-container .restaurant-menus,
+main .detail-container .restaurant-reviews {
+  max-width: 90%;
+  margin: 2rem auto .5rem;
+
 }
 
 main .detail-container .restaurant-info {
-  margin: .8rem 0 .5rem;
+  display: flex;
+  flex-direction: column;
 }
 
-main .detail-container .sub-info-title {
-  font-size: 1.25rem;
+main .detail-container .restaurant-info>* {
+  margin-bottom: .5rem;
+}
+
+main .detail-container .restaurant-info h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+main .detail-container .restaurant-sub-info {
+  flex: 1;
+}
+
+main .detail-container .restaurant-desc {
+  flex: 2;
+}
+
+main .detail-container .restaurant-menus .menu-container {
+  display: flex;
+}
+
+main .detail-container .restaurant-menus .menu-container>* {
+  margin-left: 1.5rem;
+  flex: 1;
+}
+
+main .detail-container .restaurant-reviews .reviewer-container {
+  list-style: none;
+  display: grid;
+  margin-bottom: 2rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px 25px;
+}
+
+main .detail-container .restaurant-reviews .reviewer-container>* {
+  border-radius: 6px;
+  padding: .5rem 1rem;
+  border: 1px solid #555;
+}
+
+main .detail-container .restaurant-reviews .reviewer-container .name {
+  margin: 0;
+}
+
+main .detail-container .restaurant-reviews .reviewer-container .date {
+  font-size: .8rem;
+  color: #555;
+}
+
+main .detail-container .restaurant-reviews .reviewer-input {
+  display: flex;
+  align-items: center;
+}
+
+main .detail-container .restaurant-reviews .reviewer-input svg:first-child {
+  /* display: none; */
+  flex: 1;
+}
+
+main .detail-container .restaurant-reviews .reviewer-input form:last-child {
+  flex: 2;
+  margin-left: 2rem;
+}
+
+main .detail-container .restaurant-reviews .reviewer-input .name-input,
+main .detail-container .restaurant-reviews .reviewer-input .review-input {
+  width: 100%;
+  padding: .7rem .4rem;
+  outline: none;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+}
+
+main .detail-container .restaurant-reviews .reviewer-input .review-input {
+  min-height: 7rem;
+  resize: none;
+}
+
+main .detail-container .restaurant-reviews .reviewer-input .review-submit-btn {
+  padding: .7rem 1.3rem;
+  border-radius: 4px;
+  color: white;
+  background-color: #00adb5;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  transition: .3s ease-in-out;
+}
+
+main .detail-container .restaurant-reviews .reviewer-input .review-submit-btn:hover {
+  background-color: #eee;
+  color: #333;
+  border: 1.5px solid #00494d;
+}
+
+main .detail-container .restaurant-reviews .reviewer-input .review-submit-btn:focus {
+  outline: 3px orange solid;
+}
+
+main #favorite-btn-container #favorite-btn {
+  position: fixed;
+  bottom: 3rem;
+  right: 17.5%;
+  background-color: #db0000;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: .1s ease-in-out;
+}
+
+main #favorite-btn-container #favorite-btn i {
+  font-size: 1.3rem;
+}
+
+main #favorite-btn:hover {
+  background-color: #990000 !important;
+
 }
 
 /** AKHIR MAIN */

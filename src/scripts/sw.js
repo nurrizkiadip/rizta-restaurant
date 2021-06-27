@@ -1,15 +1,13 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-console */
-/* eslint-disable no-restricted-globals */
 import CacheHelper from './utils/cache-helper';
 
-const { asset } = global.ServiceWorkerOption;
+const { assets } = global.serviceWorkerOption;
 
 self.addEventListener('install', (event) => {
   console.log('Installing Service Worker ...');
 
   // TODO: Caching App Shell Resource
-  event.waitUntil(CacheHelper.cachingAppShell([...asset, './']));
+  console.log(`Isi Asset: ${assets}`);
+  event.waitUntil(CacheHelper.cachingAppShell([...assets, './']));
 });
 
 self.addEventListener('activate', (event) => {
@@ -20,12 +18,12 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  console.log(event.request);
+  // console.log(event.request);
 
   // network only
-  event.respondWith(fetch(event.request));
+  // event.respondWith(fetch(event.request));
 
   // TODO: Add/get fetch request to/from caches
   // revalidate
-  // event.respondWith(CacheHelper.revalidateCache(event.request));
+  event.respondWith(CacheHelper.revalidateCache(event.request));
 });

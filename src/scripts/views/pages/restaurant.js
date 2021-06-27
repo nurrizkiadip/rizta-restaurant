@@ -9,6 +9,7 @@ const Restaurant = {
       <h2 tabindex="0" class="section-title">Restaurants</h2>
       <div class="content" id="content">
         <ul class="card-heros">
+          <div id="loader-show"></div>
         </ul>
       </div>
     `;
@@ -18,6 +19,7 @@ const Restaurant = {
     console.log('Rendering Restaurant...');
     const content = document.querySelector('#content .card-heros');
     const datas = await RestaurantDataSource.getList();
+    content.innerHTML = '';
     datas.forEach((data) => {
       content.innerHTML += createRestaurantItemCardTemplate(data);
     });
