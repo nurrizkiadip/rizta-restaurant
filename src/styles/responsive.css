@@ -13,16 +13,17 @@
   /** AKHIR NAV */
 
   /** MAIN */
-  main .content .detail-container {
-    /* width: 85%; */
-  }
-
   main .content .restaurant-name {
     font-size: calc(3vw - 1.25vh);
   }
 
   main .detail-container .restaurant-reviews .reviewer-container {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  main .contactus-container {
+    margin: auto;
+    width: 85%;
   }
 
   /** AKHIR MAIN */
@@ -96,6 +97,18 @@
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 
+  main .detail-container .restaurant-reviews .reviewer-input svg:first-child {
+    display: block;
+  }
+
+  main .detail-container .restaurant-reviews .reviewer-input form:last-child {
+    margin-left: 3rem;
+  }
+
+  main .contactus-container {
+    margin: auto;
+    width: 75%;
+  }
 }
 
 /* Screen 4K */

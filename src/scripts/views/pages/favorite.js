@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import { createRestaurantItemCardTemplate, noFavoriteData } from '../templates/template-creator';
 
@@ -21,8 +20,11 @@ const Favorite = {
 
     if (restaurantFavd === undefined || restaurantFavd.length === 0) {
       content.innerHTML = `
-        ${noFavoriteData}
-        <p>No Favorite Data</p>
+      <div></div>
+        <div style="margin: auto; text-align: center">
+          <p style="font-size: 2rem; font-weight: 700;">No Favorite Data</p>
+          ${noFavoriteData}
+        </div>
       `;
       return;
     }

@@ -2,7 +2,7 @@
 /* eslint-disable no-underscore-dangle */
 
 const NavbarInitiator = {
-  init({ button, navbar, content }) {
+  init({ button, navbar }) {
     const hamburger = button;
     hamburger.tabIndex = 0;
 
@@ -13,8 +13,9 @@ const NavbarInitiator = {
 
     document.querySelectorAll('header, main, footer').forEach((body) => {
       body.addEventListener('click', (event) => {
-        this._closeNavbar(event, navbar);
-        hamburger.classList.toggle('active');
+        if (this._closeNavbar(event, navbar)) {
+          hamburger.classList.remove('active');
+        }
       });
     });
   },
@@ -27,6 +28,7 @@ const NavbarInitiator = {
   _closeNavbar(event, navbar) {
     event.stopPropagation();
     navbar.classList.remove('active');
+    return true;
   },
 };
 

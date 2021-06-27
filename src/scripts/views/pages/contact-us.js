@@ -1,4 +1,5 @@
-/* eslint-disable linebreak-style */
+import { createContactUsTemplate } from '../templates/template-creator';
+
 const ContactUs = {
   async render() {
     return `
@@ -9,7 +10,7 @@ const ContactUs = {
 
   async afterRender() {
     const content = document.getElementById('content');
-    content.innerHTML = 'Isi Konten';
+    content.innerHTML = createContactUsTemplate;
   },
 };
 

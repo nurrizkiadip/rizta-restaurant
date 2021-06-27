@@ -26,12 +26,16 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
-  background-color: cornsilk;
+  width: 18px;
+  background-color: gainsboro;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #353b48;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5e6475;
 }
 
 body {
@@ -588,13 +592,13 @@ main .detail-container .restaurant-reviews .reviewer-input {
 }
 
 main .detail-container .restaurant-reviews .reviewer-input svg:first-child {
-  /* display: none; */
+  display: none;
   flex: 1;
 }
 
 main .detail-container .restaurant-reviews .reviewer-input form:last-child {
   flex: 2;
-  margin-left: 2rem;
+  margin-left: 0;
 }
 
 main .detail-container .restaurant-reviews .reviewer-input .name-input,
@@ -612,21 +616,23 @@ main .detail-container .restaurant-reviews .reviewer-input .review-input {
 }
 
 main .detail-container .restaurant-reviews .reviewer-input .review-submit-btn {
-  padding: .7rem 1.3rem;
+  padding: 1rem 1.7rem;
+  font-size: 1.1rem;
   border-radius: 4px;
   color: white;
   background-color: #00adb5;
   outline: none;
   border: none;
   cursor: pointer;
+  border: 1.5px solid #fff;
 
-  transition: .3s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 main .detail-container .restaurant-reviews .reviewer-input .review-submit-btn:hover {
   background-color: #eee;
   color: #333;
-  border: 1.5px solid #00494d;
+  border-color: #00494d;
 }
 
 main .detail-container .restaurant-reviews .reviewer-input .review-submit-btn:focus {
@@ -643,7 +649,6 @@ main #favorite-btn-container #favorite-btn {
   border-radius: 50%;
   width: 55px;
   height: 55px;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -651,13 +656,62 @@ main #favorite-btn-container #favorite-btn {
   transition: .1s ease-in-out;
 }
 
+main #favorite-btn-container #favorite-btn,
 main #favorite-btn-container #favorite-btn i {
   font-size: 1.3rem;
+  cursor: pointer;
 }
 
 main #favorite-btn:hover {
   background-color: #990000 !important;
 
+}
+
+main .contactus-container label {
+  display: block;
+  margin-bottom: .25rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+main .contactus-container input,
+main .contactus-container textarea {
+  padding: .3rem .5rem;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  border-radius: 4px;
+
+  resize: vertical;
+}
+
+main .contactus-container textarea {
+  min-height: 10vh;
+}
+
+main .contactus-container button {
+  padding: 10px 32px;
+  font-size: 1.15rem;
+  border-radius: 4px;
+  font-family: 'Nunito', sans-serif;
+  color: azure;
+  background-color: #065357;
+  outline: none;
+}
+
+main .contactus-container button:hover {
+  background-color: #e9f6f7;
+  color: #065357;
+  font-weight: 700;
+}
+
+
+main .contactus-container .form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 6px 12px;
+}
+
+main .contactus-container .form-group {
+  margin: 0 0 1rem;
 }
 
 /** AKHIR MAIN */

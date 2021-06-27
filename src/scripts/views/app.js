@@ -17,7 +17,6 @@ class App {
     NavbarInitiator.init({
       button: this._button,
       navbar: this._navbar,
-      content: this._content,
     });
   }
 
