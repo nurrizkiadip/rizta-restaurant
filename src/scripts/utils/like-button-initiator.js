@@ -1,5 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-underscore-dangle */
 import FavoriteRestaurantIdb from '../data/favorite-restaurant-idb';
 import { createFavButtonTemplate, createFavdButtonTemplate } from '../views/templates/template-creator';
 import Feedback from './feedback-initiator';

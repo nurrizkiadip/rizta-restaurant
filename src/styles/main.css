@@ -259,7 +259,6 @@ nav .navbar-menu a {
   font-weight: 600;
 
   padding: 22px 12px;
-  margin: 12px 12px;
   position: relative;
 
   transition: .07s linear;
@@ -479,6 +478,8 @@ main .content .card-heros .card-body .name a {
   font-size: 1.35rem;
   font-weight: 700;
   text-decoration: none;
+  padding: 12px 0 6px;
+  display: inline-block;
 
   color: black;
   transition: .15s linear;
@@ -675,7 +676,8 @@ main .contactus-container label {
 
 main .contactus-container input,
 main .contactus-container textarea {
-  padding: .3rem .5rem;
+  padding: .5rem;
+  font-size: 1.1rem;
   font-family: 'Poppins', sans-serif;
   width: 100%;
   border-radius: 4px;
@@ -684,7 +686,7 @@ main .contactus-container textarea {
 }
 
 main .contactus-container textarea {
-  min-height: 10vh;
+  min-height: 20vh;
 }
 
 main .contactus-container button {
