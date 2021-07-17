@@ -139,13 +139,13 @@ const createContactUsTemplate = `
   </div>
 `;
 
-const createFavButtonTemplate = () => `
+const createFavRestoButtonTemplate = () => `
   <button aria-label="Add this restaurant to favorite" id="favorite-btn" class="like">
     <i class="far fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
-const createFavdButtonTemplate = () => `
+const createUnfavRestoButtonTemplate = () => `
   <button aria-label="Remove this restaurant from favorite" id="favorite-btn" class="like">
     <i class="fas fa-heart" aria-hidden="true"></i>
   </button>
@@ -154,8 +154,8 @@ const createFavdButtonTemplate = () => `
 export {
   createRestaurantItemCardTemplate,
   createRestaurantDetailTemplate,
-  createFavButtonTemplate,
-  createFavdButtonTemplate,
+  createFavRestoButtonTemplate,
+  createUnfavRestoButtonTemplate,
   createContactUsTemplate,
   noFavoriteData,
 };
