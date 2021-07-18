@@ -5,8 +5,8 @@ const createRestaurantItemCardTemplate = (restaurant) => `
   <li class="card">
     <a href="/#/detail/${restaurant.id}"><div class="card-avatar">
       <picture>
-        <source media="(max-width: 700px)" srcset="${API_ENDPOINT.LOAD_IMAGE_SM(restaurant.pictureId)}">
-        <img tabindex="0" class="card-image" src="${API_ENDPOINT.LOAD_IMAGE_MD(restaurant.pictureId)}" alt="Gambar ${restaurant.name}">
+        <source media="(max-width: 700px)" class="lazyload" srcset="${API_ENDPOINT.LOAD_IMAGE_SM(restaurant.pictureId)}">
+        <img tabindex="0" class="card-image lazyload" data-src="${API_ENDPOINT.LOAD_IMAGE_MD(restaurant.pictureId)}" alt="Gambar ${restaurant.name}">
       </picture>
       <div class="caption-img">
         <span class="rating"><i class="fas fa-star"></i>${restaurant.rating}</span>
@@ -51,8 +51,8 @@ const createRestaurantDetailTemplate = (restaurant) => {
     <h2 class="restaurant-name">${restaurant.name}</h2>
     <div class="poster-content">
       <picture>
-        <source media="(max-width: 700px)" srcset="${API_ENDPOINT.LOAD_IMAGE_SM(restaurant.pictureId)}">
-        <img tabindex="0" class="restaurant-poster" src="${API_ENDPOINT.LOAD_IMAGE_MD(restaurant.pictureId)}" alt="Gambar ${restaurant.name}">
+        <source media="(max-width: 700px)" class="lazyload" srcset="${API_ENDPOINT.LOAD_IMAGE_SM(restaurant.pictureId)}">
+        <img tabindex="0" class="restaurant-poster lazyload" data-src="${API_ENDPOINT.LOAD_IMAGE_MD(restaurant.pictureId)}" alt="Gambar ${restaurant.name}">
       </picture>
     </div>
     <div class="restaurant-info">
