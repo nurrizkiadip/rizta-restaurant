@@ -83,6 +83,9 @@
     display: none;
   }
 
+  header {
+    background-image: url('../public/images/hero-image_4-large.jpg');
+  }
 
   main .like {
     right: 3rem;
@@ -108,6 +111,10 @@
   main .contactus-container {
     margin: auto;
     width: 75%;
+  }
+
+  footer {
+    background-image: url('../public/images/hero-image_3-large.jpg');
   }
 }
 

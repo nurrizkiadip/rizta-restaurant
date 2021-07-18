@@ -284,7 +284,7 @@ nav .navbar-menu a:hover {
 header {
   min-height: calc(100vh - 60px);
 
-  background-image: url('../public/images/heros/hero-image_4.jpg');
+  background-image: url('../public/images/hero-image_4-small.jpg');
   background-size: cover;
   background-position: 43%;
   background-repeat: no-repeat;
@@ -721,7 +721,7 @@ main .contactus-container .form-group {
 /** FOOTER */
 footer {
   min-height: 25vh;
-  background-image: url("../public/images/heros/hero-image_3.jpg");
+  background-image: url("../public/images/hero-image_3-small.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

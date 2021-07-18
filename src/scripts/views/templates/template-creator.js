@@ -4,7 +4,10 @@ import API_ENDPOINT from '../../globals/api-endpoint';
 const createRestaurantItemCardTemplate = (restaurant) => `
   <li class="card">
     <a href="/#/detail/${restaurant.id}"><div class="card-avatar">
-      <img tabindex="0" class="card-image" src="${API_ENDPOINT.LOAD_IMAGE_MD(restaurant.pictureId)}" alt="Gambar ${restaurant.name}">
+      <picture>
+        <source media="(max-width: 700px)" srcset="${API_ENDPOINT.LOAD_IMAGE_SM(restaurant.pictureId)}">
+        <img tabindex="0" class="card-image" src="${API_ENDPOINT.LOAD_IMAGE_MD(restaurant.pictureId)}" alt="Gambar ${restaurant.name}">
+      </picture>
       <div class="caption-img">
         <span class="rating"><i class="fas fa-star"></i>${restaurant.rating}</span>
         <span class="city"><i class="fas fa-map-marker-alt"></i>${restaurant.city}</span>
@@ -47,7 +50,10 @@ const createRestaurantDetailTemplate = (restaurant) => {
   <div class="detail-container">
     <h2 class="restaurant-name">${restaurant.name}</h2>
     <div class="poster-content">
-      <img class="restaurant-poster" src="${API_ENDPOINT.LOAD_IMAGE_LG(restaurant.pictureId)}" alt="${restaurant.name}" />
+      <picture>
+        <source media="(max-width: 700px)" srcset="${API_ENDPOINT.LOAD_IMAGE_SM(restaurant.pictureId)}">
+        <img tabindex="0" class="restaurant-poster" src="${API_ENDPOINT.LOAD_IMAGE_MD(restaurant.pictureId)}" alt="Gambar ${restaurant.name}">
+      </picture>
     </div>
     <div class="restaurant-info">
       <div class="restaurant-sub-info">
@@ -81,7 +87,6 @@ const createRestaurantDetailTemplate = (restaurant) => {
             ${listDrinks.join('')}
           </ol>
         </div>  
-      
       </div>
     </div>
     <div class="restaurant-reviews">
