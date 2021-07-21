@@ -15,27 +15,31 @@ describe('Unliking A Restaurant', () => {
     await FavoriteRestaurantIdb.deleteRestaurant(1);
   });
 
+  // seharusnya menampilkan tombol unfavorite yang telah di sukai
   it('should display unlike widget when the restaurant has been liked', async () => {
-    await TestFactories.createLikeButtonPresenterWithMovie({ id: 1 });
+    await TestFactories.initialFavButtonPresenterResto({ id: 1 });
 
     expect(document.querySelector('[aria-label="Remove this restaurant from favorite"]')).toBeTruthy();
   });
 
+  // seharusnya tidak menampilkan tombol favorite yang telah di sukai
   it('should not display like widget when the restaurant has been liked', async () => {
-    await TestFactories.createLikeButtonPresenterWithMovie({ id: 1 });
+    await TestFactories.initialFavButtonPresenterResto({ id: 1 });
 
     expect(document.querySelector('[aria-label="Add this restaurant to favorite"]')).toBeFalsy();
   });
 
-  it('should be able to remove liked movie from the list', async () => {
-    await TestFactories.createLikeButtonPresenterWithMovie({ id: 1 });
+  // harus bisa menghilangkan resto favorite dari daftar restaurant
+  it('should be able to remove liked restaurant from the list', async () => {
+    await TestFactories.initialFavButtonPresenterResto({ id: 1 });
 
     document.querySelector('[aria-label="Remove this restaurant from favorite"]').dispatchEvent(new Event('click'));
     expect(await FavoriteRestaurantIdb.getAllRestaurant()).toEqual([]);
   });
 
-  it('should not throw error if the unliked movie is not in the list', async () => {
-    await TestFactories.createLikeButtonPresenterWithMovie({ id: 1 });
+  // harus bisa mengembalikan error ketika berusaha klik tombol favorite pada resto yang unfavorite yg tidak ada di daftar restaurant
+  it('should not throw error if the unliked restaurant is not in the list', async () => {
+    await TestFactories.initialFavButtonPresenterResto({ id: 1 });
 
     // hapus dulu film dari daftar film yang disukai
     await FavoriteRestaurantIdb.deleteRestaurant(1);

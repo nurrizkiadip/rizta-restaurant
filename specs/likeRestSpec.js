@@ -5,13 +5,13 @@ const addLikeButtonContainer = () => {
   document.body.innerHTML = '<div id="favorite-btn-container"></div>';
 };
 
-describe('Liking A Restaurant', () => {
+describe('Favoriting A Restaurant', () => {
   beforeEach(() => {
     addLikeButtonContainer();
   });
 
   it('should show the like button when the restaurant has not been liked before', async () => {
-    await TestFactories.createLikeButtonPresenterWithMovie({ id: 1 });
+    await TestFactories.initialFavButtonPresenterResto({ id: 1 });
 
     // ekspektasi tomboj tambah muncul
     expect(document.querySelector('[aria-label="Add this restaurant to favorite"]')).toBeTruthy();
@@ -21,7 +21,7 @@ describe('Liking A Restaurant', () => {
   });
 
   it('should be able to like the restaurant', async () => {
-    await TestFactories.createLikeButtonPresenterWithMovie({ id: 1 });
+    await TestFactories.initialFavButtonPresenterResto({ id: 1 });
 
     document.getElementById('favorite-btn').dispatchEvent(new Event('click'));
 
@@ -32,8 +32,8 @@ describe('Liking A Restaurant', () => {
     FavoriteRestaurantIdb.deleteRestaurant(1);
   });
 
-  it('should not add a movie again when its already liked', async () => {
-    await TestFactories.createLikeButtonPresenterWithMovie({ id: 1 });
+  it('should not add a restaurant again when its already liked', async () => {
+    await TestFactories.initialFavButtonPresenterResto({ id: 1 });
 
     // Tambahkan film dengan ID 1 ke daftar film yang disukai
     await FavoriteRestaurantIdb.putRestaurant({ id: 1 });
@@ -45,7 +45,7 @@ describe('Liking A Restaurant', () => {
   });
 
   it('should not add a restaurant when it has no id', async () => {
-    await TestFactories.createLikeButtonPresenterWithMovie({  });
+    await TestFactories.initialFavButtonPresenterResto({  });
 
     document.getElementById('favorite-btn').dispatchEvent(new Event('click'));
    

@@ -12,7 +12,7 @@
     "start-node-server": "node server.js"
   },
   "keywords": [],
-  "author": "your_name <your.email@domain.com>",
+  "author": "nrap.rizki10@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.14.2",
