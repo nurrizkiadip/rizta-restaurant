@@ -308,7 +308,7 @@ header .content .brand p:first-child {
 
 header .content .brand p:last-child {
   font-family: 'gang_of_threeregular', sans-serif;
-  font-size: 3rem;
+  font-size: 10vw;
   font-weight: 500;
 }
 
@@ -378,7 +378,7 @@ main .content .card-heros {
   font-family: "Nunito", sans-serif;
   display: grid;
 
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 24px 36px;
 }
 
@@ -737,7 +737,6 @@ footer {
 }
 
 footer .inner-width {
-
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -761,10 +760,18 @@ footer .copyright a:hover {
 
 footer .sosmed {
   margin-top: 20px;
+  width: 100%;
 
   font-size: 1.3rem;
+
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, 32px);
+  justify-content: center;
+  gap: 8px; */
+
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   flex-direction: row;
 }
 
